@@ -1,6 +1,7 @@
 "use client";
 
 import { ReactNode, useEffect, useRef, useState } from "react";
+import { MatrixRain } from "./MatrixRain";
 
 export function Experience({ children }: { children: ReactNode }) {
   const root = useRef<HTMLDivElement>(null);
@@ -61,6 +62,7 @@ export function Experience({ children }: { children: ReactNode }) {
   return (
     <div ref={root} className={menuOpen ? "experience menu-open" : "experience"}>
       <div className="cursor-glow" aria-hidden="true" />
+      <MatrixRain />
       <div className="scanlines" aria-hidden="true" />
       {children}
     </div>

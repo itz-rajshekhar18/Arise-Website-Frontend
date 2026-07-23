@@ -67,6 +67,94 @@ button, a, summary {
   mix-blend-mode: screen;
 }
 
+.matrix-rain {
+  position: fixed;
+  z-index: 6;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: .22;
+  mix-blend-mode: screen;
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, #000 12%, #000 84%, transparent 100%),
+    linear-gradient(to right, #000 0%, rgba(0,0,0,.58) 31%, rgba(0,0,0,.58) 69%, #000 100%);
+  mask-composite: intersect;
+}
+
+.matrix-rain-column {
+  --matrix-color: var(--lime);
+  position: absolute;
+  top: -115vh;
+  left: var(--matrix-left);
+  width: 18px;
+  height: 118vh;
+  color: var(--matrix-color);
+  font-family: var(--font-mono), monospace;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+  animation: matrix-fall var(--matrix-duration) linear var(--matrix-delay) infinite;
+  will-change: transform, opacity;
+}
+
+.matrix-rain-column::before {
+  position: absolute;
+  inset: 0;
+  content: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンARISEFEST2026CODEPLAYBUILD0123456789";
+  background: linear-gradient(
+    to bottom,
+    #fff 0%,
+    #fff 3%,
+    var(--matrix-color) 8%,
+    var(--matrix-color) 58%,
+    color-mix(in srgb, var(--matrix-color) 45%, transparent) 82%,
+    transparent 100%
+  );
+  background-clip: text;
+  letter-spacing: 1px;
+  writing-mode: vertical-lr;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.matrix-rain-column:nth-child(even)::before {
+  content: "ガギグゲゴザジズゼゾダヂヅデドバビブベボABCDEFGHIJKLMNOPQRSTUVWXYZNEXUS_TERMINAL9876543210";
+}
+
+.matrix-rain-column:nth-child(3n)::before {
+  content: "アカサタナハマヤラワイキシチニヒミリウクスツヌフムユルCODE_WARS010101011001";
+}
+
+.matrix-rain-column:nth-child(4n) {
+  --matrix-color: var(--cyan);
+}
+
+.matrix-rain-column:nth-child(7n) {
+  --matrix-color: var(--violet);
+}
+
+.matrix-rain-column:nth-child(11n) {
+  opacity: .5;
+}
+
+@keyframes matrix-fall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -12%, 0);
+  }
+  8% {
+    opacity: 1;
+  }
+  82% {
+    opacity: .85;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 205%, 0);
+  }
+}
+
 .scanlines {
   position: fixed;
   inset: 0;
@@ -79,6 +167,26 @@ button, a, summary {
     transparent 3px,
     rgba(255, 255, 255, 0.025) 4px
   );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .matrix-rain-column {
+    animation: none;
+    opacity: .16;
+    transform: translateY(78vh);
+  }
+}
+
+@media (max-width: 700px) {
+  .matrix-rain {
+    opacity: .15;
+  }
+
+  .matrix-rain-column {
+    width: 15px;
+    font-size: 9px;
+    line-height: 12px;
+  }
 }
 
 .site-shell {
