@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Rajdhani, Space_Mono } from "next/font/google";
+import { SitePreloader } from "@/components/SitePreloader";
 import "./globals.css";
 
 const display = Rajdhani({
@@ -43,7 +44,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${display.variable} ${mono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <SitePreloader />
+        {children}
+      </body>
     </html>
   );
 }

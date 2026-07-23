@@ -1,6 +1,17 @@
+import Image from "next/image";
+
 export function ScheduleHero() {
   return (
     <section className="sched-hero" id="overview">
+      <Image
+        alt=""
+        className="schedule-command-image"
+        fill
+        priority
+        sizes="100vw"
+        src="/arise-schedule-command.png"
+      />
+      <div className="schedule-command-shade" aria-hidden="true" />
       <div className="sched-hero-grid" aria-hidden="true" />
       <div className="sched-date-chip">September 12—14 // 2026</div>
       <p className="signal"><span /> Schedule transmission online</p>
@@ -30,6 +41,19 @@ export function ScheduleHero() {
         <b>72</b>
         <span>HOURS_LIVE</span>
       </div>
+      <aside className="schedule-command-hud" aria-hidden="true">
+        <header><span>Mission control</span><strong>Live</strong></header>
+        <div>
+          <i /><span>Day 01</span><b>Opening protocol</b>
+        </div>
+        <div>
+          <i /><span>Day 02</span><b>Peak operations</b>
+        </div>
+        <div>
+          <i /><span>Day 03</span><b>Final transmission</b>
+        </div>
+        <footer><span>16 sessions synced</span><strong>100%</strong></footer>
+      </aside>
     </section>
   );
 }

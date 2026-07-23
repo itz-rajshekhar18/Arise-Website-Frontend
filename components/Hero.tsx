@@ -1,6 +1,17 @@
+import Image from "next/image";
+
 export function Hero() {
   return (
     <section className="hero section-pad">
+      <Image
+        alt=""
+        className="home-lobby-image"
+        fill
+        priority
+        sizes="100vw"
+        src="/arise-home-lobby.png"
+      />
+      <div className="home-lobby-shade" aria-hidden="true" />
       <div className="hero-grid" aria-hidden="true" />
       <div className="hero-orbit" aria-hidden="true">
         <div className="orbit-ring orbit-ring--outer" />
@@ -53,6 +64,21 @@ export function Hero() {
       <div className="hero-side-data" aria-hidden="true">
         <span>LAT_12.9346°N</span>
         <span>LONG_77.5341°E</span>
+      </div>
+      <div className="home-zone-uplink" aria-hidden="true">
+        {[
+          ["01", "Arena"],
+          ["02", "Indie"],
+          ["03", "Code"],
+          ["04", "Build"],
+        ].map(([code, label]) => (
+          <div key={code}><span>{code}</span><strong>{label}</strong><i /></div>
+        ))}
+      </div>
+      <div className="home-player-count" aria-hidden="true">
+        <span>Live entrants</span>
+        <strong>50,000+</strong>
+        <i>Queue rising</i>
       </div>
       <div className="scroll-cue">
         <span>Scroll to initialize</span>

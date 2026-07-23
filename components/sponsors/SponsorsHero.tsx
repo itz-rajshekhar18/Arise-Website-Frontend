@@ -1,6 +1,17 @@
+import Image from "next/image";
+
 export function SponsorsHero() {
   return (
     <section className="sponsor-hero" id="overview">
+      <Image
+        alt=""
+        className="sponsor-alliance-image"
+        fill
+        priority
+        sizes="100vw"
+        src="/arise-sponsor-alliance.png"
+      />
+      <div className="sponsor-alliance-shade" aria-hidden="true" />
       <div className="sponsor-hero-grid" aria-hidden="true" />
       <div className="sponsor-eyebrow">01 // Strategic_Alliance</div>
       <h1>
@@ -34,6 +45,11 @@ export function SponsorsHero() {
         <div><strong>50,000+</strong><span>On-site attendees</span></div>
         <div><strong>200+</strong><span>Colleges represented</span></div>
         <div><strong>12.4M</strong><span>Digital reach</span></div>
+      </div>
+      <div className="sponsor-alliance-network" aria-hidden="true">
+        <span>Alliance network</span>
+        <div><i /><i /><i /><i /><i /><b /></div>
+        <strong>India // 200+ nodes online</strong>
       </div>
     </section>
   );

@@ -134,7 +134,7 @@ export function RegistrationEntryPortal() {
 
   return (
     <>
-      <section className="entry-grid" aria-label="Registration types">
+      <section className="entry-grid" id="registration-types" aria-label="Registration types">
         {entries.map((entry) => (
           <article
             className={`entry-card entry-card--${entry.accent}${selected === entry.id ? " is-selected" : ""}`}
