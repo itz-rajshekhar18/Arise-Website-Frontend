@@ -34,7 +34,7 @@ export function Hero() {
           <a className="button button--primary" href="#arenas">
             Explore the festival <span>↘</span>
           </a>
-          <a className="button button--ghost" href="#access">
+          <a className="button button--ghost" href="/registration">
             Register now
           </a>
         </div>
@@ -45,7 +45,7 @@ export function Hero() {
           </div>
           <div>
             <span>Location_Ref</span>
-            <strong>PES University, Bengaluru</strong>
+            <strong>Polaris School of Technology, Bengaluru, Karnataka</strong>
           </div>
         </div>
       </div>

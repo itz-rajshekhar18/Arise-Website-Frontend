@@ -14,7 +14,7 @@ export function Access() {
       </p>
       <a
         className="button button--primary button--large"
-        href="mailto:tickets@arisefest.in?subject=ARISE%2F%2FFEST%202026%20Early%20Access"
+        href="/registration"
       >
         Initialize registration <span>↗</span>
       </a>

@@ -17,7 +17,7 @@ const mono = Space_Mono({
 export const metadata: Metadata = {
   title: "ARISE//FEST 2026 — Play. Build. Become.",
   description:
-    "Bengaluru’s three-day convergence of esports, indie games, code, and digital culture. September 12–14, 2026.",
+    "ARISE//FEST brings three days of esports, indie games, code, and digital culture to Polaris School of Technology, Bengaluru, Karnataka.",
   keywords: ["esports", "gaming festival", "indie games", "Bengaluru", "ARISE FEST"],
   openGraph: {
     title: "ARISE//FEST 2026",

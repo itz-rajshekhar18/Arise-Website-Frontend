@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "Is the event fully digital or hybrid?",
     answer:
-      "ARISE//FEST is a physical-first experience at PES University, Bengaluru, with selected matches and showcases broadcast globally.",
+      "ARISE//FEST is a physical-first experience at Polaris School of Technology, Bengaluru, Karnataka, with selected matches and showcases broadcast globally.",
   },
   {
     question: "Are team registrations open?",

@@ -1,6 +1,6 @@
 export function Partners() {
   return (
-    <section className="partners">
+    <section className="partners" id="sponsors">
       <p>Powered by industry leaders</p>
       <div className="partner-row" aria-label="Festival partners">
         <span>SYNTH_SYS</span>
